@@ -1,5 +1,13 @@
 import subprocess
 
+# Header
+print("")
+print("Video Interpolater. Philipp Wachowitz 2023")
+print("Takes an input video and stretches it in time with optical flow applied")
+print("WARNING: Very slow. Use only on short clips. High stretch values produce nice glitches")
+print("--------------------------------------------------------------------------------------")
+print("")
+
 input_file = input("Input File: ")
 stretch_factor = input("Stretch factor: ")
 output_file = input_file + "-minterpolate.mp4"
