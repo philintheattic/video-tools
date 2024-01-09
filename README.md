@@ -1,8 +1,22 @@
 # video-tools
 ## Installation
-Copy the script you want to use into the folder that contains the videofile that you want to process. Run the script and follow the prompts. For the script to work you need an installation of ffmpeg that is added to PATH. Depending on the script you may also need opencv which you can install by running:
+### For Windows
+If you don't want to bother with python and all that code you can download the windows executables from the [latest release](https://github.com/philintheattic/video-tools/releases)
+
+### Python
+Copy the script you want to use into the folder that contains the videofile that you want to process. Run the script and follow the prompts. For the script to work you need an installation of ffmpeg that is added to PATH. Depending on the script you may also need:
++ opencv
 ```
 pip install opencv-python
+```
++ Pillow
+```
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade Pillow
+```
++ NumPy
+```
+pip install numpy
 ```
 ## Description
 I was looking for ways to manipulate videofiles with code to use the output in an artistic way. These tools are a way of learning (to code) and automating processes that would be very time consuming if done in software like After Effects or Fusion. The project is basically just tailored around my needs although I try to keep it as reusable and user-friendly as possible. 
