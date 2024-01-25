@@ -68,8 +68,44 @@ Output file. Stretch factor = 40
 
 https://github.com/philintheattic/video-tools/assets/154841043/f5615b80-466b-47f1-9dd8-6f017f7e45d9
 
+### videoeraserpolater
+Takes an input video and extracts 1 frame per second. The resulting video is then stretched back to its original length with the `minterpolate` filter applied. The result is a wildly interpolated version of the original clip. A bit hard to describe I guess so here is an example:
+
+Input file:
+
+https://github.com/philintheattic/video-tools/assets/154841043/6e85e60a-10d0-4c60-b5cb-702106c010c8
+
+Output file:
+
+https://github.com/philintheattic/video-tools/assets/154841043/7497b490-09fb-4bd1-a898-9f4b331d5211
+
+### video2ascii
+Converts any video into ASCII art. This works by first extracting all the frames from the input video and then converting them one by one into ASCII. The code for the ASCII conversion is based upon a [youtube tutorial by Raphson](https://youtu.be/2fZBLPk-T2Y?si=btfsYBQzULswSW4Z). If all images are processed they are concatenated with ffmpeg. You lose the audio in the process but this is no big deal since you can easily just use the audio track from the original clip in your video editor of choice. WARNING: Since every frame needs to be calculated it could take a lot of time depending on the length (and thus frame count) of the input video.
+
+You can also specify the "Level of Detail" (LOD) of the ASCII conversion.
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/784ddced-5514-44ff-9de7-0c9ec8c8c777
+
+### videomvextractor
+This script uses the ffmpeg `codecview` filter option that superimposes motion vector data upon the image. The cool thing is that it is coupled with a `blend` filter that effectively cancels out the original footage so that only the motion vector visualization is visible in the final output. 
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/b9e0a6a6-3c6b-4107-afe6-791924e4916a
+
+### videopixelsort
+Works like the video2ascii script but performs a pixel sorting algorithm on the individual frames. The code for the pixel sorting stuff comes from [Gregory Johnson](https://gist.github.com/GregTJ/097d7829048c6bf27bc5008a8d153825). WARNING: Since every frame needs to be calculated it could take a lot of time depending on the length (and thus frame count) of the input video.
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/794d7404-5374-4e42-b9d5-a3438e5c9b94
+
 ### tbp_makeimage
 I took the [timebased photography](https://github.com/hbajohr/time-based-photography) script by Hannes Bajohr and modified it so that it only outputs 1 Frame. Check out his [github](https://github.com/hbajohr) for more information on what timebased photography is and how it works.
+
+
 
 
 
