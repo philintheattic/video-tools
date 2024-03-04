@@ -102,6 +102,30 @@ Example:
 
 https://github.com/philintheattic/video-tools/assets/154841043/794d7404-5374-4e42-b9d5-a3438e5c9b94
 
+### videocirculator
+Uses the ffmpeg `geq` (generic equation) filter option to bend the pixels around a half-sphere that is mirrored along the horizontal axis. This ffmpeg command was originally used to spice up [waveform visualizations](https://www.splashmusic.com/post/audio-visualisation-with-ffmpeg) (also done with ffmpeg) and bend them around in a circle but can of course be used on any footage with interesting results.
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/1295c892-65e8-479f-864a-f77c9061fedf
+
+### aspectratioswitcher
+When the client wants vertical video for reels...
+This is just a joke. It switches the videos orientation (it flips width with height and vice versa) without preserving the original aspect ratio. The result is a stretched video. A fun idea would be to write a program that automatically rips reels off instagram, flips the aspect ratio and displays the new videos somewhere else. Maybe in an art gallery. (as if there was a satirical commentary on viewing habits in the 21st century hidden in there...)
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/71b56ddb-735d-49e4-b19e-3960e9f084a1
+
+### videotripper
+Makes videos "trippy". I tried to learn the opencv library and found out that you can just multiply the values of a pixel array with an arbitrary number and it results in crazy colors. This script takes an input video and a multiplication factor and outputs a new video with multiplied color values resulting in a colorful "trippy" look. The higher the number the more "noisy" it looks. You lose the audio in the process but you can always add it back using the original video in the video editor of your choice. In fact the result works great if you overlay it on top of your original clip and play around with blending modes.
+As a bonus, this script actually shows a preview of the resulting image while it is encoding so you can quickly check the intensity of the effect and abort (using the Enter key while the preview window is in focus) the process if you need to adjust the value.
+
+Example:
+
+https://github.com/philintheattic/video-tools/assets/154841043/4a6baada-a553-4941-ac83-ab4815636212
+
+
 ### tbp_makeimage
 I took the [timebased photography](https://github.com/hbajohr/time-based-photography) script by Hannes Bajohr and modified it so that it only outputs 1 Frame. Check out his [github](https://github.com/hbajohr) for more information on what timebased photography is and how it works.
 
