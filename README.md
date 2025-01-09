@@ -130,6 +130,16 @@ https://github.com/philintheattic/video-tools/assets/154841043/4a6baada-a553-494
 I took the [timebased photography](https://github.com/hbajohr/time-based-photography) script by Hannes Bajohr and modified it so that it only outputs 1 Frame. Check out his [github](https://github.com/hbajohr) for more information on what timebased photography is and how it works.
 
 
+### videonoisegenerator
+Just a simple ffmpeg call that generates a noise pattern over middle gray so you can use it as an overlay in your favorite NLE. You can specify the length (in seconds), resolution (in the format widthxheight i.e. 1920x1080 or 300x300 etc.) and amount of noise (60 is a good starting point).
+
+
+### yt2txt_cli
+A simple command line tool that rips the subtitle track of a given YouTube URL and stores only the text output in a file. You can run it like this:
+```
+py yt2txt_cli.py <url>
+```
+
 
 
 
