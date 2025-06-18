@@ -63,9 +63,13 @@ subprocess.run(makeFrames())
 
 
 # Read the ASCII Characters from external file. This makes changing it easy for the user
-with open("assets/chars.txt") as f:
-    chars = f.read()
-    f.close()
+try:
+    with open("assets/chars.txt") as f:
+        chars = f.read()
+        f.close()
+except FileNotFoundError:
+    print("chars.txt not found. fallback to default string.")
+    chars = " .'`^\,:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
 # Turn the ASCII string into an array of characters
 charArray = list(chars)
