@@ -15,7 +15,7 @@ def generateFirstOutput():
         input_file,
         "-crf",
         "63",
-        input_file+"-out-0.mp4"
+        "0000"+".mp4"
     ]
     return commands_list
 
@@ -24,10 +24,10 @@ def generateNextOutput(count):
     commands_list = [
         "ffmpeg",
         "-i",
-        input_file+"-out-"+str(count)+".mp4",
+        str(f"{count:04}")+".mp4",
         "-crf",
         "63",
-        input_file+"-out-"+str(count+1)+".mp4"
+        str(f"{(count+1):04}")+".mp4"
     ]
     return commands_list
 
